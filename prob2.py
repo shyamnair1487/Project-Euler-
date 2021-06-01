@@ -7,12 +7,26 @@
 # find the sum of the even-valued terms.
 
 
-
+def fib(limit):
+    
+    a = 1
+    b = 2
+    evens = [2]
+    while b < limit:
+        c = a + b
+        if c > limit:
+            break
+        else:
+            a = b
+            b = c
+            if b % 2 == 0:
+                evens.append(b)
+    return sum(evens)
 
 
 def Main():
 
-	pass
+	print(fib(4000000))
 
 
 
