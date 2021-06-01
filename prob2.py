@@ -6,6 +6,15 @@
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, 
 # find the sum of the even-valued terms.
 
+import argparse 
+
+parser =argparse.ArgumentParser()
+
+parser.add_argument("-l", "--limit", type=int, default=4000000)
+
+args = parser.parse_args()
+
+limit = args.limit
 
 def fib(limit):
     
@@ -26,7 +35,7 @@ def fib(limit):
 
 def Main():
 
-	print(fib(4000000))
+	print(fib(limit))
 
 
 
