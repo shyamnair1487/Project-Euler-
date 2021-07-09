@@ -13,6 +13,7 @@ logging.basicConfig(level=logging.DEBUG)
 parser = argparse.ArgumentParser()
 
 parser.add_argument('-p','--pal')
+parser.add_argument('-n', '--num', type=int, help="Number of digits to be multiplied")
 
 args = parser.parse_args()
 # converting int to string then splitting in half 
@@ -37,6 +38,11 @@ def isPalindrome(num):
 
 
 # loop to find product of two 3 digit numbers, then determine if its a palindrome
+def largest_palindrome():
+
+	pass
+
+
 def Main():
 
 	string = args.pal
