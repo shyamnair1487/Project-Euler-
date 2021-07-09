@@ -12,8 +12,8 @@ logging.basicConfig(level=logging.DEBUG)
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('-p','--pal')
-parser.add_argument('-n', '--num', type=int, help="Number of digits to be multiplied")
+parser.add_argument('-p','--pal', help="Pass in the string to be evaluated as a palindrome")
+parser.add_argument('-n', '--num', type=int, help="Number of digits to be multiplied", choices={2,3})
 
 args = parser.parse_args()
 # converting int to string then splitting in half 
@@ -44,7 +44,7 @@ def largest_palindrome():
 
 
 def Main():
-
+	num = args.num
 	string = args.pal
 
 	if string:
@@ -57,6 +57,8 @@ def Main():
 
 			print(f"{string} is NOT a palindrome")
 
+
+	print(num)		
 
 if __name__ == "__main__":
 
