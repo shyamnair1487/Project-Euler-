@@ -7,12 +7,9 @@
 
 
 import argparse
-import logging
-logging.basicConfig(level=logging.DEBUG)
 
 parser = argparse.ArgumentParser()
 
-# parser.add_argument('-p','--pal', help="Pass in the string to be evaluated as a palindrome")
 parser.add_argument('num', type=int, help="Number of digits to be multiplied", choices={2,3})
 
 args = parser.parse_args()
@@ -37,13 +34,13 @@ def isPalindrome(num):
 
 
 
-# loop to find product of two 3 digit numbers, then determine if its a palindrome
+# loop to find product of 2 or 3 digit numbers, then determine if its a palindrome
 def largest_palindrome(n_digits):
 
 	largest_product = 0
 
-	low_range = 10**(n-1)
-	high_range = 10**n
+	low_range = 10**(n_digits-1)
+	high_range = 10**(n_digits)
 
 	for i in range(low_range, high_range):
 
@@ -60,20 +57,8 @@ def largest_palindrome(n_digits):
 
 def Main():
 	num = args.num
-	string = args.pal
-
-	if string:
-
-		if isPalindrome(string):
-
-			print(f"{string} is a palindrome")
-
-		else:
-
-			print(f"{string} is NOT a palindrome")
-
-
-	print(num)		
+	
+	print(largest_palindrome(num))	
 
 if __name__ == "__main__":
 
