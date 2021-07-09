@@ -8,6 +8,10 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 """
 
 
+import logging
+logging.basicConfig(Level=logging.DEBUG)
+
+
 
 
 # converting int to string then splitting in half 
