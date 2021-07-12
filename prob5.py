@@ -6,26 +6,6 @@ What is the smallest positive number that is evenly divisible by all of the numb
 
 import numpy as np
 
-# def divide_all(num):
-
-# 	div_all = True
-# 	for i in range(1,21):
-
-# 		if num % i != 0:
-# 			div_all = False
-# 			break
-# 	return div_all
-
-# x = 21
-# while True:
-
-# 	if divide_all(x):
-
-# 		break
-# 	else:
-# 		x += 1
-
-# print(x)
 
 def isPrime(num):
 
