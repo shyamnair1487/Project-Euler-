@@ -26,14 +26,22 @@ def isPrime(num):
             break
     return prime
 
+def get_prime(prime_n):
+    
+    current = 0
+    num = 1
+    
+    while current != prime_n:
+        
+        num += 1
+        if isPrime(num):
+            current += 1
+    return num
 
 def Main():
 
 	n = args.n
-	print(n)
-	for i in range(2,50):
-		if isPrime(i):
-			print(i, end=" ")
+	print(get_prime(n))
 
 
 if __name__ == "__main__":
