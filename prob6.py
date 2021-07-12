@@ -16,11 +16,20 @@ parser.add_argument("-n", "--num", type=int, default=10, help="The number of nat
 
 args = parser.parse_args()
 
+
+def sum_squared_difference(num):
+
+	sum_square = sum([i**2 for i in range(1,num+1)])
+
+	square_of_sum = (sum([i for i in range(1, num+1)]))**2
+
+	return square_of_sum - sum_square
+
 def Main():
 
 	num = args.num
 
-	print(num)
+	print(sum_squared_difference(num))
 
 	
 
