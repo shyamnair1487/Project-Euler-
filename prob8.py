@@ -40,7 +40,30 @@ args = parser.parse_args()
 
 def Main():
 
-	pass
+	num = args.adj
+
+	product_numbers = ''
+
+	highest_product = 0
+
+	for i in range(len(thousand_digit)):
+
+		test_num = thousand_digit[i:i+num]
+		product = 1
+
+		for j in test_num:
+
+			product *= int(j)
+
+		if product > highest_product:
+
+			highest_product = product
+			product_numbers = test_num
+
+	product_numbers = ' x '.join([i for i in product_numbers])
+
+	print(f"The {num} adjacent numbers in the 1000 digit number that have the greatest product are:")
+	print(f"{product_numbers} = {highest_product}")
 
 
 if __name__ == "__main__":
