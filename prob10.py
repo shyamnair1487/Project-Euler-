@@ -5,6 +5,7 @@ Find the sum of all the primes below two million.
 
 """
 import argparse
+import math
 
 parser = argparse.ArgumentParser()
 
@@ -29,9 +30,19 @@ def isPrime(num):
 
 def Main():
 
-	num = args.num
-	print(num)
+	limit = args.num
+	
+	
+	prime_sum = 0
+	number = 1
 
+	while number < 2000000:
+
+		if isPrime(number):
+			prime_sum += number  
+		number += 1
+
+	print(f"Sum of primes below {limit} is {prime_sum}")
 
 if __name__ == "__main__":
 
